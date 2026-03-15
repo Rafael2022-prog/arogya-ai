@@ -6,30 +6,51 @@ Sistem AI berbasis Llama 3 dengan RAG (Retrieval-Augmented Generation) yang dapa
 
 ## Keunggulan Arogya AI
 
-✅ **Terus Belajar** - Tidak stuck pada data training, bisa update pengetahuan real-time
-✅ **Minimal Data** - Cukup data 2013 & 2024 untuk mulai, akan makin pintar seiring waktu
-✅ **Kontekstual** - Memahami konteks lokal Maluku Tenggara
-✅ **Bahasa Natural** - Bisa tanya jawab seperti berbicara dengan ahli kesehatan
-✅ **Open Source** - Gratis, bisa jalan offline, data aman
+✅ **Comprehensive Health Intelligence** - Bukan hanya prediksi penyakit, tapi sistem manajemen kesehatan lengkap
+✅ **20+ Penyakit** - Menular, tidak menular, kesehatan ibu & anak
+✅ **Budget & Resource Planning** - Optimasi anggaran, obat, SDM, fasilitas
+✅ **Program Management** - RENJA, RENSTRA, KPI monitoring
+✅ **10,000+ Training Data** - Real data dari Profil Kesehatan, RENJA, RENSTRA
+✅ **Bahasa Natural** - Tanya jawab seperti berbicara dengan ahli kesehatan
+✅ **Ready to Deploy** - Full model tersedia, tidak perlu base model terpisah
 
-## Arsitektur Sistem
+## Kemampuan Lengkap
 
-```
-┌─────────────────────────────────────────────────────┐
-│                   Arogya AI v1.0                    │
-├─────────────────────────────────────────────────────┤
-│  Llama 3 (8B)          │  RAG System               │
-│  - Base Intelligence   │  - Vector Database        │
-│  - Natural Language    │  - Knowledge Retrieval    │
-│  - Reasoning           │  - Continuous Learning    │
-├─────────────────────────────────────────────────────┤
-│              Knowledge Base                         │
-│  - Profil Kesehatan 2013-2024                      │
-│  - Data Penyakit Real-time                         │
-│  - Kebijakan Kesehatan                             │
-│  - Demografi Maluku Tenggara                       │
-└─────────────────────────────────────────────────────┘
-```
+### 🏥 Disease Analysis & Prediction
+- **Penyakit Menular**: DBD, Malaria, TB, ISPA, Pneumonia, Diare, HIV/AIDS, Hepatitis, Kusta, Difteri, Campak, Tetanus, COVID-19
+- **Penyakit Tidak Menular**: Hipertensi, Diabetes, Kanker, Stroke, Penyakit Jantung
+- **Kesehatan Ibu & Anak**: Stunting, Gizi Buruk, BBLR, Imunisasi, Kesehatan Ibu Hamil & Balita
+
+### 💰 Budget Planning & Optimization
+- Alokasi anggaran optimal per program
+- Proyeksi kebutuhan budget 2025-2029 (RENSTRA)
+- Cost-benefit analysis
+- Efisiensi penggunaan anggaran
+
+### 💊 Resource Management
+- **Drug Inventory**: Prediksi kebutuhan obat, inventory optimization
+- **Human Resources**: Distribusi tenaga kesehatan, gap analysis SDM
+- **Facilities**: Status faskes, kebutuhan upgrade, capacity planning
+
+### 📋 Program Planning & Monitoring
+- **RENJA**: Rencana Kerja Tahunan, target & sasaran
+- **RENSTRA**: Strategic planning 5 tahun (2025-2029)
+- **KPI Monitoring**: Track performance vs target
+- **Evaluation**: Analisis capaian program
+
+### 🗺️ Geographic Analysis
+- Coverage 9 kecamatan di Maluku Tenggara
+- Perbandingan antar kecamatan
+- Hotspot mapping
+- Resource distribution
+
+### 📊 Reporting & Analytics
+- Automated report generation
+- Executive summary
+- Trend analysis
+- Comparative analysis
+
+**📖 Detail lengkap**: Lihat [AROGYA_CAPABILITIES.md](AROGYA_CAPABILITIES.md)
 
 ## Instalasi
 
@@ -71,8 +92,19 @@ Arogya: Berdasarkan data historis, prediksi kasus DBD di Kei Kecil
         untuk bulan Maret adalah 18-22 kasus. Ini meningkat 20% dari 
         bulan sebelumnya. Saya rekomendasikan...
 
-User: Apa penyebab utamanya?
-Arogya: Dari analisis data, faktor utama adalah...
+User: Berapa budget yang dibutuhkan untuk program DBD 2026?
+Arogya: Berdasarkan RENJA 2026, alokasi anggaran program DBD adalah...
+        Dengan breakdown: fogging Rp X, larvasida Rp Y, edukasi Rp Z...
+
+User: Bagaimana distribusi tenaga kesehatan di 9 kecamatan?
+Arogya: Dari data Profil Kesehatan 2024, distribusi SDM kesehatan:
+        - Kei Kecil: 45 tenaga (dokter 5, perawat 25, bidan 15)
+        - Kei Besar: 38 tenaga...
+        Gap analysis menunjukkan kekurangan di...
+
+User: Generate laporan executive summary Q4 2024
+Arogya: [Menghasilkan laporan lengkap dengan highlights, achievements,
+        challenges, dan recommendations]
 ```
 
 ### Mode 2: API Server
@@ -85,6 +117,9 @@ API endpoint:
 - `POST /api/predict` - Prediksi kasus penyakit
 - `POST /api/analyze` - Analisis tren kesehatan
 - `POST /api/recommend` - Rekomendasi kebijakan
+- `POST /api/budget` - Budget planning & optimization
+- `POST /api/resources` - Resource management (obat, SDM, faskes)
+- `POST /api/report` - Generate automated reports
 
 ### Mode 3: Dashboard Web
 ```bash

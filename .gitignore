@@ -1,4 +1,8 @@
-# Data files (sensitive/internal)
+# ============================================
+# SENSITIVE DATA - NEVER COMMIT
+# ============================================
+
+# Data files (sensitive health data)
 data/*.xlsx
 data/*.xls
 data/*.pdf
@@ -6,47 +10,97 @@ data/*.csv
 *.xlsx
 *.xls
 *.pdf
+*.csv
 
-# Python cache
+# Model files (too large for git)
+*.bin
+*.safetensors
+*.gguf
+*.pth
+*.pt
+arogya-model/
+arogya-full-model/
+models/
+checkpoints/
+offload/
+
+# Secrets & Tokens
+.env
+*.key
+*token*
+*secret*
+hf_token.txt
+
+# ============================================
+# INTERNAL/DEV FILES - DO NOT COMMIT
+# ============================================
+
+# Development notebooks
+*.ipynb
+.ipynb_checkpoints/
+arogya_colab*.ipynb
+Arogya_AI*.ipynb
+
+# Development scripts
+audit_pdf.py
+generate_notebook.py
+import_*.py
+manual_converter.py
+pdf_extractor.py
+test_*.py
+debug_*.py
+prepare_training_data.py
+finetune_model.py
+upload_to_huggingface.py
+
+# Internal documentation
+step*.txt
+notes.txt
+todo.txt
+internal_*.md
+dev_*.md
+training_data.json
+
+# Temporary files
+temp/
+tmp/
+scratch/
+backup/
+
+# ============================================
+# STANDARD IGNORES
+# ============================================
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-
-# Virtual environments
-venv/
 env/
+venv/
+.venv
 ENV/
+pip-log.txt
+pip-delete-this-directory.txt
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*.sublime-*
 
-# Model files (too large for git)
-*.bin
-*.pt
-*.pth
-*.safetensors
-arogya-model/
-models/checkpoints/
-
-# Temporary files
-*.log
-*.tmp
-step3_new.txt
-generate_notebook.py
-audit_pdf.py
-
-# OS files
+# OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Jupyter checkpoints
-.ipynb_checkpoints/
+# Logs
+*.log
+logs/
 
-# Training outputs
-training_data.json
-offload/
+# Build
+dist/
+build/
+*.egg-info/
