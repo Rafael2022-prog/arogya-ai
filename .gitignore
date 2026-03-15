@@ -1,0 +1,52 @@
+# Data files (sensitive/internal)
+data/*.xlsx
+data/*.xls
+data/*.pdf
+data/*.csv
+*.xlsx
+*.xls
+*.pdf
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model files (too large for git)
+*.bin
+*.pt
+*.pth
+*.safetensors
+arogya-model/
+models/checkpoints/
+
+# Temporary files
+*.log
+*.tmp
+step3_new.txt
+generate_notebook.py
+audit_pdf.py
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Training outputs
+training_data.json
+offload/
